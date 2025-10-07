@@ -1,0 +1,49 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@layer {
+  .container {
+    @apply px-[15px] mx-auto;
+  }
+  .label {
+    @apply flex  flex-col gap-3;
+  }
+  .inputCart {
+    @apply border-gray-300 border w-full py-2 px-2 rounded-[5px] focus:border-gray-900 outline-none;
+  }
+  .skeleton {
+    @apply bg-[#e2e5e7] bg-[linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0))] bg-[length:40px_100%] bg-no-repeat  animate-shine;
+  }
+  .inp {
+    @apply p-[8px] text-sm md:text-[16px] hover:border-gray-600 transition-all duration-200  pl-[15px] w-full  rounded-[5px]  border-2 border-gray-300 outline-none focus:border-gray-700;
+  }
+}
+@theme {
+  --animate-shine: shine 1s ease infinite;
+}
+@keyframes shine {
+  to {
+    background-position: right -40px top 0;
+  }
+}
+button {
+  cursor: pointer;
+}
+.mySwiper .swiper-pagination-bullet-active {
+  width: 30px;
+  border-radius: 5px;
+  background-color: rgb(16, 24, 40);
+}
+
+.mySwiper .swiper-button-prev,
+.mySwiper .swiper-button-next {
+  padding: 0 11px;
+  height: 30px;
+  width: 30px;
+
+  border-radius: 30px;
+  font-weight: bold;
+  background-color: rgb(16, 24, 40);
+  color: white;
+  top: -45px;
+}
+
